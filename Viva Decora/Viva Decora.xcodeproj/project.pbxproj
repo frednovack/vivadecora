@@ -16,6 +16,7 @@
 		B65669BA1E68D77C00E580C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65669B91E68D77C00E580C8 /* Assets.xcassets */; };
 		B65669BD1E68D77C00E580C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65669BB1E68D77C00E580C8 /* LaunchScreen.storyboard */; };
 		B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD031E68FAD900DB5F0E /* VenueCell.m */; };
+		B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD061E68FDA400DB5F0E /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		B65669BE1E68D77C00E580C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6EFCD021E68FAD900DB5F0E /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		B6EFCD031E68FAD900DB5F0E /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
+		B6EFCD051E68FDA400DB5F0E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B6EFCD061E68FDA400DB5F0E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		F0C45A4EB716711823D3F7CF /* Pods-Viva Decora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viva Decora.release.xcconfig"; path = "Pods/Target Support Files/Pods-Viva Decora/Pods-Viva Decora.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +93,8 @@
 				B65669BE1E68D77C00E580C8 /* Info.plist */,
 				B65669B61E68D77C00E580C8 /* Viva_Decora.xcdatamodeld */,
 				B65669AA1E68D77C00E580C8 /* Supporting Files */,
+				B6EFCD051E68FDA400DB5F0E /* TableViewController.h */,
+				B6EFCD061E68FDA400DB5F0E /* TableViewController.m */,
 			);
 			path = "Viva Decora";
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65669B21E68D77C00E580C8 /* ViewController.m in Sources */,
+				B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */,
 				B65669AF1E68D77C00E580C8 /* AppDelegate.m in Sources */,
 				B65669AC1E68D77C00E580C8 /* main.m in Sources */,
 				B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */,

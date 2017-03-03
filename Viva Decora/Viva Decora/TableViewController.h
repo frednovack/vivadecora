@@ -1,5 +1,5 @@
 //
-//  VenueCell.h
+//  TableViewController.h
 //  Viva Decora
 //
 //  Created by Frederico Novack Amaral Pereira on 3/2/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VenueCell : UITableViewCell
-
--(void)setVenueWithDictionary:(NSDictionary*)venueInfo;
+@interface TableViewController : UITableViewController
 
 @end

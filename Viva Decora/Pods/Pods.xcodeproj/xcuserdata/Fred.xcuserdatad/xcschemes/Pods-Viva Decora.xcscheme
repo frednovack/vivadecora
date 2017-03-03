@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F883C1AC9419E0752A30867463583BD2'
+               BlueprintIdentifier = '18B9075C71BE54B410B69702BF984EC5'
                BlueprintName = 'Pods-Viva Decora'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Viva Decora.a'>

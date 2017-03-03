@@ -59,7 +59,8 @@ NSDictionary *venues;
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
      
-     cell.textLabel.text = [[venues[@"avfms"] objectAtIndex:indexPath.row] objectForKey:@"venue"];
+     [cell setVenueWithDictionary:[venues[@"avfms"] objectAtIndex:indexPath.row]];
+     
  
  // Configure the cell...
 

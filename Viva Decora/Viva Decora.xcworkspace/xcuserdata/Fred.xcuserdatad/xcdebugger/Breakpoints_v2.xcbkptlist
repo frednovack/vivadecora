@@ -73,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Viva Decora/ViewController.m"
-            timestampString = "510204380.861102"
+            filePath = "Viva Decora/VenueCell.m"
+            timestampString = "510208111.196512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-setVenueWithDictionary:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,6 +15,7 @@
 		B65669B81E68D77C00E580C8 /* Viva_Decora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B65669B61E68D77C00E580C8 /* Viva_Decora.xcdatamodeld */; };
 		B65669BA1E68D77C00E580C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65669B91E68D77C00E580C8 /* Assets.xcassets */; };
 		B65669BD1E68D77C00E580C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65669BB1E68D77C00E580C8 /* LaunchScreen.storyboard */; };
+		B66CE90A1E6A24260083D6FA /* eye-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B66CE9091E6A24260083D6FA /* eye-icon.png */; };
 		B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD031E68FAD900DB5F0E /* VenueCell.m */; };
 		B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD061E68FDA400DB5F0E /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		B65669B91E68D77C00E580C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65669BC1E68D77C00E580C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65669BE1E68D77C00E580C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66CE9091E6A24260083D6FA /* eye-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye-icon.png"; sourceTree = "<group>"; };
 		B6EFCD021E68FAD900DB5F0E /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		B6EFCD031E68FAD900DB5F0E /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		B6EFCD051E68FDA400DB5F0E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		B65669A91E68D77C00E580C8 /* Viva Decora */ = {
 			isa = PBXGroup;
 			children = (
+				B66CE9081E6A24160083D6FA /* Assets */,
 				B6EFCD011E68FA2100DB5F0E /* Custom Components */,
 				B65669AD1E68D77C00E580C8 /* AppDelegate.h */,
 				B65669AE1E68D77C00E580C8 /* AppDelegate.m */,
@@ -105,6 +108,14 @@
 				B65669AB1E68D77C00E580C8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B66CE9081E6A24160083D6FA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B66CE9091E6A24260083D6FA /* eye-icon.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		B6EFCD011E68FA2100DB5F0E /* Custom Components */ = {
@@ -186,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66CE90A1E6A24260083D6FA /* eye-icon.png in Resources */,
 				B65669BD1E68D77C00E580C8 /* LaunchScreen.storyboard in Resources */,
 				B65669BA1E68D77C00E580C8 /* Assets.xcassets in Resources */,
 				B65669B51E68D77C00E580C8 /* Main.storyboard in Resources */,

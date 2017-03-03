@@ -32,10 +32,11 @@ NSDictionary *venues;
     [super viewDidLoad];
     
     venues = [[NSDictionary alloc]init];
-    NSLog(@"VIEW SIZE %f",self.view.frame.size.width);
+
+    [venueTable setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    
     
     [self getAllVenues];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 

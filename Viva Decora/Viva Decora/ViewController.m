@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VenueCell.h"
+#import <AFNetworking.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
@@ -15,6 +16,10 @@
 @end
 
 @implementation ViewController
+
+NSString *const url = @"https://aviewfrommyseat.com/avf/api/featured.php?appkey=f6bcd8e8bb853890f4fb2be8ce0418fa";
+
+NSDictionary *venues;
 
 @synthesize venueTable;
 
@@ -25,7 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    venues = [[NSDictionary alloc]init];
     NSLog(@"VIEW SIZE %f",self.view.frame.size.width);
+    
+    [self getAllVenues];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -43,20 +52,36 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 12;
+    return [venues[@"avfms"] count];
 }
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
+     
+     cell.textLabel.text = [[venues[@"avfms"] objectAtIndex:indexPath.row] objectForKey:@"venue"];
  
-     [cell configureCell];
  // Configure the cell...
 
  
  return cell;
  }
- 
+
+
+-(void)getAllVenues{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        venues = responseObject;
+        [venueTable reloadData];
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Failed to get stuff");
+    }];
+    
+}
 
 /*
  // Override to support conditional editing of the table view.

@@ -26,12 +26,6 @@
 }
 
 
--(void)configureCell{
-    
-    CGRect superViewFrame = self.superview.frame;
-    [self setBackgroundColor:[UIColor redColor]];
-//    CGRect frame = CGRectMake((superViewFrame.size.width * 0.10), <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
-}
 
 - (void)setFrame:(CGRect)frame {
 

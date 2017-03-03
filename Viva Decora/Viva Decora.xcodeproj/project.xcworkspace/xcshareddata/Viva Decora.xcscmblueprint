@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "533FF5D51B9FCC9B142B866F7F92BB5E62E47BE8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "533FF5D51B9FCC9B142B866F7F92BB5E62E47BE8" : 9223372036854775807,
+    "F391133F480B5763CFBD6A5401C002E4F1906E7C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE620D8F-4B4C-40C3-B1E7-9CE65C2BB895",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "533FF5D51B9FCC9B142B866F7F92BB5E62E47BE8" : "vivadecora\/",
+    "F391133F480B5763CFBD6A5401C002E4F1906E7C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Viva Decora",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Viva Decora\/Viva Decora.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/frednovack\/vivadecora.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "533FF5D51B9FCC9B142B866F7F92BB5E62E47BE8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:frednovack\/vivadecora.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F391133F480B5763CFBD6A5401C002E4F1906E7C"
+    }
+  ]
+}

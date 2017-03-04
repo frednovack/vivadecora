@@ -16,10 +16,36 @@
 
 @synthesize venueImage;
 @synthesize venueName;
+@synthesize zoomedEffectImgView;
+@synthesize venueImageView;
+@synthesize venueNoteLabel;
+@synthesize venueLocalLabel;
+@synthesize venueTitleLabel;
+@synthesize capacityLabel;
+@synthesize constructionCostLabel;
+@synthesize openedLabel;
+@synthesize surfaceLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    //Setup images and its effects
+    [zoomedEffectImgView setImage:venueImage];
+    //create effect
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    //add effect to view
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+    effectView.frame = zoomedEffectImgView.frame;
+    [zoomedEffectImgView addSubview:effectView];
+    
+    [venueImageView setImage:venueImage];
+    
+    [venueImageView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    //Setup labels already known
+    venueTitleLabel.text = self.venueName;
+
     
     
     
@@ -29,6 +55,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

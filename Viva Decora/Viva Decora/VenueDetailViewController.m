@@ -19,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Venue -> %@",venueName);
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

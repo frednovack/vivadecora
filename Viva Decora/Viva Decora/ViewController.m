@@ -151,8 +151,6 @@ NSDictionary *venues;
         vc.venueName = selectedVenue.theVenue[@"venue"];
         
 
-        
-        
     }
     
 }

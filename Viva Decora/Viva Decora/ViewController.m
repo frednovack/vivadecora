@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "VenueCell.h"
 #import "API_Comm.h"
+#import "Reachability.h"
 #import "VenueDetailViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
@@ -30,8 +32,44 @@ NSDictionary *venues;
     
 }
 
+-(void)testConnection{
+    //checks for internet connection
+    UIAlertAction *retryButton;
+    UIAlertController *alert;
+    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+    {
+        alert = [UIAlertController
+                                    alertControllerWithTitle:@"Oops! Sem conexão!"
+                                    message:@"Você está sem conexão, conecte-se a rede celular ou wifi para acessar os dados do aplicativo."
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        
+        retryButton = [UIAlertAction
+                                      actionWithTitle:@"Tentar Novamente"
+                                      style:UIAlertActionStyleDefault
+                                      handler:^(UIAlertAction * action) {
+                                          [self testConnection];
+                                      }];
+        [alert addAction:retryButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        [self getAllVenues];
+    }
+    
+
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self testConnection];
+    
+    
     
     //Personalization of the screen
     venues = [[NSDictionary alloc]init];
@@ -47,7 +85,7 @@ NSDictionary *venues;
     self.navigationController.navigationBar.translucent = NO;
     
     
-    [self getAllVenues];
+    
 }
 
 

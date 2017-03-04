@@ -21,6 +21,7 @@
 		B682694F1E6A81F200859430 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B682694E1E6A81F200859430 /* star-icon.png */; };
 		B68269511E6A8C9B00859430 /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B68269501E6A8C9B00859430 /* map-icon.png */; };
 		B68269531E6A8E5B00859430 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68269521E6A8E5B00859430 /* MapKit.framework */; };
+		B68269561E6A912200859430 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B68269551E6A912200859430 /* Reachability.m */; };
 		B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD031E68FAD900DB5F0E /* VenueCell.m */; };
 		B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD061E68FDA400DB5F0E /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,8 @@
 		B682694E1E6A81F200859430 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
 		B68269501E6A8C9B00859430 /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon.png"; sourceTree = "<group>"; };
 		B68269521E6A8E5B00859430 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B68269541E6A912200859430 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B68269551E6A912200859430 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B6EFCD021E68FAD900DB5F0E /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		B6EFCD031E68FAD900DB5F0E /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		B6EFCD051E68FDA400DB5F0E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 		B66CE9101E6A54820083D6FA /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				B68269541E6A912200859430 /* Reachability.h */,
+				B68269551E6A912200859430 /* Reachability.m */,
 				B66CE9111E6A55040083D6FA /* API_Comm.h */,
 				B66CE9121E6A55040083D6FA /* API_Comm.m */,
 			);
@@ -304,6 +309,7 @@
 				B66CE9131E6A55040083D6FA /* API_Comm.m in Sources */,
 				B65669AC1E68D77C00E580C8 /* main.m in Sources */,
 				B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */,
+				B68269561E6A912200859430 /* Reachability.m in Sources */,
 				B65669B81E68D77C00E580C8 /* Viva_Decora.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

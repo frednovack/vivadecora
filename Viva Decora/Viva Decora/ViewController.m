@@ -24,7 +24,7 @@ NSDictionary *venues;
 @synthesize venueTable;
 
 -(void)viewWillLayoutSubviews{
-    [venueTable setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height)];
+    [venueTable setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
     
 }
@@ -32,9 +32,18 @@ NSDictionary *venues;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Personalization of the screen
     venues = [[NSDictionary alloc]init];
 
     [venueTable setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    //bluewish color
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.286 green: 0.509 blue: 0.772 alpha: 1.0];
+    
+    self.title = @"Viva Decora";
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+    self.navigationController.navigationBar.translucent = NO;
     
     
     [self getAllVenues];

@@ -7,6 +7,7 @@
 //
 
 #import "VenueCell.h"
+
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
@@ -40,6 +41,7 @@ NSString *const image_base_url = @"https://aviewfrommyseat.com/wallpaper/";
     
     //Delete previous views
     [self.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     //configure venue image
     venueImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height * 0.56)];
     
@@ -47,7 +49,26 @@ NSString *const image_base_url = @"https://aviewfrommyseat.com/wallpaper/";
     
     NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@%@",image_base_url,venueInfo[@"image"]]];
     
-    [venueImage sd_setImageWithURL:url];
+    [venueImage sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        //set zoomed effect
+        UIImageView *zoomer = [[UIImageView alloc]initWithFrame:venueImage.frame];
+        [zoomer setImage:venueImage.image];
+        //create effect
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+        //add effect to view
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+        effectView.frame = venueImage.frame;
+        [zoomer addSubview:effectView];
+        
+        [self.contentView addSubview:zoomer];
+        [self.contentView addSubview:venueImage];
+
+    
+        
+    }];
+    
+    [venueImage setOpaque:NO];
     
     //configure venue title label
     venueName = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width * 0.06, self.frame.size.height * 0.66, self.frame.size.width * 0.7, 18)];
@@ -93,7 +114,6 @@ NSString *const image_base_url = @"https://aviewfrommyseat.com/wallpaper/";
     [self.contentView addSubview:viewsLabel];
     [self.contentView addSubview:eyeIcon];
     [self.contentView addSubview:venueName];
-    [self.contentView addSubview:venueImage];
     
     
 }

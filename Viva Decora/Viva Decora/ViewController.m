@@ -24,7 +24,8 @@ NSDictionary *venues;
 @synthesize venueTable;
 
 -(void)viewWillLayoutSubviews{
-    [venueTable setFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height)];
+    [venueTable setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height)];
+    
     
 }
 
@@ -49,18 +50,26 @@ NSDictionary *venues;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [venues[@"avfms"]count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [venues[@"avfms"] count];
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"";
 }
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
      
-     [cell setVenueWithDictionary:[venues[@"avfms"] objectAtIndex:indexPath.row]];
+     [cell setVenueWithDictionary:[venues[@"avfms"] objectAtIndex:indexPath.section]];
      
  
  // Configure the cell...

@@ -7,6 +7,7 @@
 //
 
 #import "VenueDetailViewController.h"
+#import "API_Comm.h"
 
 @interface VenueDetailViewController ()
 
@@ -21,13 +22,16 @@
 @synthesize venueNoteLabel;
 @synthesize venueLocalLabel;
 @synthesize venueTitleLabel;
-@synthesize capacityLabel;
-@synthesize constructionCostLabel;
-@synthesize openedLabel;
-@synthesize surfaceLabel;
+@synthesize averageRatingLabel;
+@synthesize starImageView;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Hide elements
+    [starImageView setAlpha:0];
+    [averageRatingLabel setAlpha:0];
     
     
     //Setup images and its effects
@@ -45,7 +49,26 @@
     
     //Setup labels already known
     venueTitleLabel.text = self.venueName;
-
+    
+    
+    API_Comm *api = [[API_Comm alloc]init];
+    
+    [api detailVenueWithName:self.venueName WithCompletionBlock:^(NSDictionary *venueDic) {
+        
+        NSLog(@"HERE > %@",venueDic);
+        
+        //write the necessary labels
+        venueNoteLabel.text = venueDic[@"team"];
+        
+        venueLocalLabel.text = [NSString stringWithFormat:@"%@, %@, %@, %@",venueDic[@"address"],venueDic[@"city"], venueDic[@"state"],venueDic[@"country"]];
+        
+        if (![venueDic[@"average_rating"] isEqualToString:@""]) {
+            [starImageView setAlpha:1];
+            [averageRatingLabel setAlpha:1];
+            averageRatingLabel.text = venueDic[@"average_rating"];
+        }
+        
+    }];
     
     
     

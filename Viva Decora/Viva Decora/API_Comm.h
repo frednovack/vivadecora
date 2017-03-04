@@ -11,6 +11,7 @@
 @interface API_Comm : NSObject
 
 -(void)getAllViewsUpponFinishBlock:(void (^)(NSDictionary *allObjects))callbackBlock;
+-(void)detailVenueWithName:(NSString*)venueName WithCompletionBlock:(void (^)(NSDictionary *venueDic))callbackBlock;
 
 
 @end

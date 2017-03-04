@@ -28,4 +28,22 @@
     }];
     
 }
+
+-(void)detailVenueWithName:(NSString*)venueName WithCompletionBlock:(void (^)(NSDictionary *venueDic))callbackBlock{
+    
+    NSString *venueNameForWeb = [venueName stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *requestUrl = [NSString stringWithFormat:@"https://aviewfrommyseat.com/avf/api/venue.php?appkey=f6bcd8e8bb853890f4fb2be8ce0418fa&venue=%@&info=true",venueNameForWeb];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:requestUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"response > %@",responseObject);
+        callbackBlock([responseObject[@"avfms"] objectAtIndex:0]);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Failed to get stuff");
+    }];
+    
+    
+}
 @end

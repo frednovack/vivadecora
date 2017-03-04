@@ -17,9 +17,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *venueTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *venueNoteLabel;
 @property (strong, nonatomic) IBOutlet UILabel *venueLocalLabel;
-@property (strong, nonatomic) IBOutlet UILabel *capacityLabel;
-@property (strong, nonatomic) IBOutlet UILabel *constructionCostLabel;
-@property (strong, nonatomic) IBOutlet UILabel *openedLabel;
-@property (strong, nonatomic) IBOutlet UILabel *surfaceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *averageRatingLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *starImageView;
+@property (strong, nonatomic) IBOutlet UITextView *statsTextView;
+
 
 @end

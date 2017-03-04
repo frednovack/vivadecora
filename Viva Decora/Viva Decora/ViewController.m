@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "VenueCell.h"
 #import "API_Comm.h"
-#import <AFNetworking.h>
+#import "VenueDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
@@ -56,7 +56,15 @@ NSDictionary *venues;
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)getAllVenues{
+    API_Comm *comm = [[API_Comm alloc]init];
+    
+    [comm getAllViewsUpponFinishBlock:^(NSDictionary *allObjects) {
+        venues = allObjects;
+        [venueTable reloadData];
+    }];
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -89,16 +97,12 @@ NSDictionary *venues;
  }
 
 
--(void)getAllVenues{
-    API_Comm *comm = [[API_Comm alloc]init];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VenueCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     
-    [comm getAllViewsUpponFinishBlock:^(NSDictionary *allObjects) {
-        venues = allObjects;
-        [venueTable reloadData];
-    }];
-    
-}
+    [self performSegueWithIdentifier:@"detailVenueSegue" sender:selectedCell];
 
+}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -133,5 +137,24 @@ NSDictionary *venues;
  }
  */
 
+#pragma mark - Segue Control
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    VenueCell *selectedVenue = sender;
+    
+    if ([[segue identifier] isEqualToString:@"detailVenueSegue"]) {
+        
+        VenueDetailViewController *vc = (VenueDetailViewController*)[segue destinationViewController];
+        
+        vc.venueImage = selectedVenue.venueImage.image;
+
+        vc.venueName = selectedVenue.theVenue[@"venue"];
+        
+
+        
+        
+    }
+    
+}
 
 @end

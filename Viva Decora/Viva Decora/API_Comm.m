@@ -5,7 +5,7 @@
 //  Created by Frederico Novack Amaral Pereira on 3/3/17.
 //  Copyright © 2017 frednovack. All rights reserved.
 //--------------------------------------------------
-//THIS OBJECT IS RESPOSABLE FOR COMMUNICAITING WITH THE API
+//THIS OBJECT IS RESPOSABLE FOR COMMUNICATIONS WITH THE API
 //ALL METHODS FOR WEBSERVICE SHOULD BE IMPLEMENTED HERE
 //--------------------------------------------------
 
@@ -21,7 +21,6 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     [manager GET:baseUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"Finished manager");
         callbackBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

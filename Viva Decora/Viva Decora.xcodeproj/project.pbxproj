@@ -17,6 +17,7 @@
 		B65669BD1E68D77C00E580C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65669BB1E68D77C00E580C8 /* LaunchScreen.storyboard */; };
 		B66CE90A1E6A24260083D6FA /* eye-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B66CE9091E6A24260083D6FA /* eye-icon.png */; };
 		B66CE9131E6A55040083D6FA /* API_Comm.m in Sources */ = {isa = PBXBuildFile; fileRef = B66CE9121E6A55040083D6FA /* API_Comm.m */; };
+		B66CE9171E6A6A230083D6FA /* VenueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66CE9161E6A6A230083D6FA /* VenueDetailViewController.m */; };
 		B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD031E68FAD900DB5F0E /* VenueCell.m */; };
 		B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD061E68FDA400DB5F0E /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,8 @@
 		B66CE9091E6A24260083D6FA /* eye-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye-icon.png"; sourceTree = "<group>"; };
 		B66CE9111E6A55040083D6FA /* API_Comm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_Comm.h; sourceTree = "<group>"; };
 		B66CE9121E6A55040083D6FA /* API_Comm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_Comm.m; sourceTree = "<group>"; };
+		B66CE9151E6A6A230083D6FA /* VenueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailViewController.h; sourceTree = "<group>"; };
+		B66CE9161E6A6A230083D6FA /* VenueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailViewController.m; sourceTree = "<group>"; };
 		B6EFCD021E68FAD900DB5F0E /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		B6EFCD031E68FAD900DB5F0E /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		B6EFCD051E68FDA400DB5F0E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -92,8 +95,7 @@
 				B6EFCD011E68FA2100DB5F0E /* Custom Components */,
 				B65669AD1E68D77C00E580C8 /* AppDelegate.h */,
 				B65669AE1E68D77C00E580C8 /* AppDelegate.m */,
-				B65669B01E68D77C00E580C8 /* ViewController.h */,
-				B65669B11E68D77C00E580C8 /* ViewController.m */,
+				B66CE9141E6A69ED0083D6FA /* Views */,
 				B65669B31E68D77C00E580C8 /* Main.storyboard */,
 				B65669B91E68D77C00E580C8 /* Assets.xcassets */,
 				B65669BB1E68D77C00E580C8 /* LaunchScreen.storyboard */,
@@ -129,6 +131,17 @@
 				B66CE9121E6A55040083D6FA /* API_Comm.m */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		B66CE9141E6A69ED0083D6FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B65669B01E68D77C00E580C8 /* ViewController.h */,
+				B65669B11E68D77C00E580C8 /* ViewController.m */,
+				B66CE9151E6A6A230083D6FA /* VenueDetailViewController.h */,
+				B66CE9161E6A6A230083D6FA /* VenueDetailViewController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B6EFCD011E68FA2100DB5F0E /* Custom Components */ = {
@@ -275,6 +288,7 @@
 				B65669B21E68D77C00E580C8 /* ViewController.m in Sources */,
 				B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */,
 				B65669AF1E68D77C00E580C8 /* AppDelegate.m in Sources */,
+				B66CE9171E6A6A230083D6FA /* VenueDetailViewController.m in Sources */,
 				B66CE9131E6A55040083D6FA /* API_Comm.m in Sources */,
 				B65669AC1E68D77C00E580C8 /* main.m in Sources */,
 				B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */,

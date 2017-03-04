@@ -12,15 +12,13 @@
 
 
 @implementation VenueCell
-{
-    UIImageView *venueImage;
-    UIImageView *eyeIcon;
-    UILabel *viewsLabel;
-    UILabel *venueName;
-    UILabel *note;
-    UILabel *local;
-    
-}
+@synthesize venueImage;
+@synthesize eyeIcon;
+@synthesize viewsLabel;
+@synthesize venueName;
+@synthesize note;
+@synthesize local;
+@synthesize theVenue;
 
 NSString *const image_base_url = @"https://aviewfrommyseat.com/wallpaper/";
 
@@ -37,7 +35,8 @@ NSString *const image_base_url = @"https://aviewfrommyseat.com/wallpaper/";
 }
 
 -(void)setVenueWithDictionary:(NSDictionary*)venueInfo{
-    
+    //store current venue for further use (did select row at index path)
+    theVenue = venueInfo;
     
     //Delete previous views
     [self.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];

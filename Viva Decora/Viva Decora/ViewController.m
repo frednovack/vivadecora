@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VenueCell.h"
+#import "API_Comm.h"
 #import <AFNetworking.h>
 #import <QuartzCore/QuartzCore.h>
 
@@ -89,16 +90,11 @@ NSDictionary *venues;
 
 
 -(void)getAllVenues{
+    API_Comm *comm = [[API_Comm alloc]init];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        venues = responseObject;
+    [comm getAllViewsUpponFinishBlock:^(NSDictionary *allObjects) {
+        venues = allObjects;
         [venueTable reloadData];
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Failed to get stuff");
     }];
     
 }

@@ -18,6 +18,7 @@
     NSArray *gps;
 }
 
+//components
 @synthesize venueImage;
 @synthesize venueName;
 @synthesize zoomedEffectImgView;
@@ -37,6 +38,7 @@
     self.title = venueName;
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     //Hide elements
@@ -51,11 +53,15 @@
     
     //Setup images and its effects
     [zoomedEffectImgView setImage:venueImage];
+    
     //create effect
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    
     //add effect to view
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+    
     effectView.frame = zoomedEffectImgView.frame;
+    
     [zoomedEffectImgView addSubview:effectView];
     
     [venueImageView setImage:venueImage];
@@ -67,10 +73,13 @@
     
     
     API_Comm *api = [[API_Comm alloc]init];
+    
     //get all data and present it to view
     [api detailVenueWithName:self.venueName WithCompletionBlock:^(NSDictionary *venueDic) {
         
+        //creates an animation with the alpha of the elements
         [UIView animateWithDuration:1.5 delay:0.00 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
             //Change Alpha of the necessary elements
             [venueNoteLabel setAlpha:1];
             [venueLocalLabel setAlpha:1];
@@ -82,29 +91,44 @@
             venueLocalLabel.text = [NSString stringWithFormat:@"%@, %@, %@, %@",venueDic[@"address"],venueDic[@"city"], venueDic[@"state"],venueDic[@"country"]];
             
             if (![venueDic[@"average_rating"] isEqualToString:@""]) {
+                
                 [starImageView setAlpha:1];
+                
                 [averageRatingLabel setAlpha:1];
+                
                 averageRatingLabel.text = venueDic[@"average_rating"];
+                
             }
             
             if (![venueDic[@"stats"] isEqualToString:@""]) {
+                
                 [statsTextView setAlpha:1];
+                
                 statsTextView.text = [venueDic[@"stats"] stringByReplacingOccurrencesOfString:@"<b>" withString:@" "];
+                
                 statsTextView.text = [statsTextView.text stringByReplacingOccurrencesOfString:@"</b>" withString:@" "];
+                
                 statsTextView.text = [statsTextView.text stringByReplacingOccurrencesOfString:@"<br>" withString:@" "];
                 
             }
             
             if (![venueDic[@"sameas"] isEqualToString:@""]) {
+                
                 [linkButton setAlpha:1];
+                
                 NSArray *aux = [venueDic[@"sameas"] componentsSeparatedByString:@","];
+                
                 [linkButton setTitle:aux[0] forState:UIControlStateNormal];
+                
             }
         
             
             if (![venueDic[@"gps"]isEqualToString:@""]) {
+                
                 [mapButton setAlpha:1];
+                
                 gps = [venueDic[@"gps"] componentsSeparatedByString:@","];
+                
                 
             }
         
@@ -121,6 +145,7 @@
 
 - (IBAction)mapButtonAction:(UIButton *)sender {
     
+    //process to open maps with the longitude and altitude of the venue
     Class mapItemClass = [MKMapItem class];
     if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)])
     {

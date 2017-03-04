@@ -27,13 +27,13 @@ NSDictionary *venues;
 @synthesize venueTable;
 
 -(void)viewWillLayoutSubviews{
+    //Initialize the main table view on the screen
     [venueTable setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-    
 }
 
+//checks for internet connection, creates a loop that only breaks if the app have internet connection,
+//otherwise it will be asking to retry
 -(void)testConnection{
-    //checks for internet connection
     UIAlertAction *retryButton;
     UIAlertController *alert;
     if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
@@ -75,6 +75,7 @@ NSDictionary *venues;
     venues = [[NSDictionary alloc]init];
 
     [venueTable setBackgroundColor:[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1]];
+    
     //bluewish color
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.286 green: 0.509 blue: 0.772 alpha: 1.0];
     
@@ -125,13 +126,11 @@ NSDictionary *venues;
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"venueCell" forIndexPath:indexPath];
      
+     //Here it will be used indexPath.section (and not indexPath.row) in order to
+     //make the section Header as space between cells.
      [cell setVenueWithDictionary:[venues[@"avfms"] objectAtIndex:indexPath.section]];
-     
  
- // Configure the cell...
-
- 
- return cell;
+     return cell;
  }
 
 

@@ -24,7 +24,8 @@
 @synthesize venueTitleLabel;
 @synthesize averageRatingLabel;
 @synthesize starImageView;
-
+@synthesize statsTextView;
+@synthesize linkButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +33,8 @@
     //Hide elements
     [starImageView setAlpha:0];
     [averageRatingLabel setAlpha:0];
+    [statsTextView setAlpha:0];
+    [linkButton setAlpha:0];
     
     
     //Setup images and its effects
@@ -68,6 +71,20 @@
             averageRatingLabel.text = venueDic[@"average_rating"];
         }
         
+        if (![venueDic[@"stats"] isEqualToString:@""]) {
+            [statsTextView setAlpha:1];
+            statsTextView.text = [venueDic[@"stats"] stringByReplacingOccurrencesOfString:@"<b>" withString:@" "];
+            statsTextView.text = [statsTextView.text stringByReplacingOccurrencesOfString:@"</b>" withString:@" "];
+            statsTextView.text = [statsTextView.text stringByReplacingOccurrencesOfString:@"<br>" withString:@" "];
+
+        }
+        
+        if (![venueDic[@"sameas"] isEqualToString:@""]) {
+            [linkButton setAlpha:1];
+            NSArray *aux = [venueDic[@"sameas"] componentsSeparatedByString:@","];
+            [linkButton setTitle:aux[0] forState:UIControlStateNormal];
+        }
+        
     }];
     
     
@@ -79,6 +96,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)linkButtonAction:(UIButton *)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:sender.titleLabel.text]];
+
+}
 
 
 /*

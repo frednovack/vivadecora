@@ -19,6 +19,8 @@
 		B66CE9131E6A55040083D6FA /* API_Comm.m in Sources */ = {isa = PBXBuildFile; fileRef = B66CE9121E6A55040083D6FA /* API_Comm.m */; };
 		B66CE9171E6A6A230083D6FA /* VenueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66CE9161E6A6A230083D6FA /* VenueDetailViewController.m */; };
 		B682694F1E6A81F200859430 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B682694E1E6A81F200859430 /* star-icon.png */; };
+		B68269511E6A8C9B00859430 /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B68269501E6A8C9B00859430 /* map-icon.png */; };
+		B68269531E6A8E5B00859430 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68269521E6A8E5B00859430 /* MapKit.framework */; };
 		B6EFCD041E68FAD900DB5F0E /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD031E68FAD900DB5F0E /* VenueCell.m */; };
 		B6EFCD071E68FDA400DB5F0E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EFCD061E68FDA400DB5F0E /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		B66CE9151E6A6A230083D6FA /* VenueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailViewController.h; sourceTree = "<group>"; };
 		B66CE9161E6A6A230083D6FA /* VenueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailViewController.m; sourceTree = "<group>"; };
 		B682694E1E6A81F200859430 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
+		B68269501E6A8C9B00859430 /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon.png"; sourceTree = "<group>"; };
+		B68269521E6A8E5B00859430 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B6EFCD021E68FAD900DB5F0E /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		B6EFCD031E68FAD900DB5F0E /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		B6EFCD051E68FDA400DB5F0E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68269531E6A8E5B00859430 /* MapKit.framework in Frameworks */,
 				A3BAEA73A522018A6F60767B /* libPods-Viva Decora.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +126,7 @@
 		B66CE9081E6A24160083D6FA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B68269501E6A8C9B00859430 /* map-icon.png */,
 				B682694E1E6A81F200859430 /* star-icon.png */,
 				B66CE9091E6A24260083D6FA /* eye-icon.png */,
 			);
@@ -159,6 +165,7 @@
 		F99823B7DF9B80B31746EC2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B68269521E6A8E5B00859430 /* MapKit.framework */,
 				A9E4EC71D4427EE732A6427C /* libPods-Viva Decora.a */,
 			);
 			name = Frameworks;
@@ -227,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66CE90A1E6A24260083D6FA /* eye-icon.png in Resources */,
+				B68269511E6A8C9B00859430 /* map-icon.png in Resources */,
 				B65669BD1E68D77C00E580C8 /* LaunchScreen.storyboard in Resources */,
 				B65669BA1E68D77C00E580C8 /* Assets.xcassets in Resources */,
 				B65669B51E68D77C00E580C8 /* Main.storyboard in Resources */,

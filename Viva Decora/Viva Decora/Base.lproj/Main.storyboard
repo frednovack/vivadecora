@@ -121,6 +121,14 @@
                                     <action selector="linkButtonAction:" destination="u70-Ki-zZn" eventType="touchUpInside" id="3yZ-xL-iyx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CN-Xd-b0H">
+                                <rect key="frame" x="135" y="140" width="50" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="map-icon.png"/>
+                                <connections>
+                                    <action selector="mapButtonAction:" destination="u70-Ki-zZn" eventType="touchUpInside" id="oZf-JO-wBD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -128,6 +136,7 @@
                     <connections>
                         <outlet property="averageRatingLabel" destination="hix-9e-DbQ" id="Oas-LD-pyD"/>
                         <outlet property="linkButton" destination="R10-Fw-YyA" id="UOA-Eb-MZB"/>
+                        <outlet property="mapButton" destination="6CN-Xd-b0H" id="OLa-r4-rrd"/>
                         <outlet property="starImageView" destination="qMu-Za-SCK" id="h6F-fl-aAm"/>
                         <outlet property="statsTextView" destination="Eug-lO-O8U" id="CGc-oa-X7f"/>
                         <outlet property="venueImageView" destination="KUg-vd-e72" id="Ziq-MV-wyS"/>
@@ -161,6 +170,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map-icon.png" width="512" height="512"/>
         <image name="star-icon.png" width="720" height="720"/>
     </resources>
 </document>

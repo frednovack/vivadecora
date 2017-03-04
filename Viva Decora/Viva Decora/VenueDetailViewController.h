@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *averageRatingLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *starImageView;
 @property (strong, nonatomic) IBOutlet UITextView *statsTextView;
+@property (strong, nonatomic) IBOutlet UIButton *mapButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *linkButton;
 
